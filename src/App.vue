@@ -20,7 +20,7 @@ export default {
   background-color: #EEEEEE;
   margin:0;
   padding:24px;
-  color:#42A5F5;
+  color:#42A5F5;  
   
 }
 </style>

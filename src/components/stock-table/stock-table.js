@@ -33,7 +33,9 @@ export default {
       let tableData = Object.assign({}, this.tableData)
       for (let key in newTableObj) {
         if (tableData[key]) {
+
           if (this.tableData[key].oldValue) {
+            if (this.tableData[key].oldValue.length >= 10) this.tableData[key].oldValue.shift()
             tableData[key] = {
               oldValue: [...this.tableData[key].oldValue, this.tableData[key].newValue],
               newValue: this.roundOffPrice(newTableObj[key]),
