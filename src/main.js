@@ -6,9 +6,13 @@ import router from './router'
 import VueMaterial from 'vue-material'
 import '../node_modules/vue-material/dist/vue-material.css'
 
+import 'chart.js'
+import 'hchs-vue-charts'
+
 Vue.config.productionTip = false
 
 Vue.use(VueMaterial)
+Vue.use(window.VueCharts)
 
 /* eslint-disable no-new */
 new Vue({

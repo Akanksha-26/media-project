@@ -1,12 +1,18 @@
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', 'hour': 'numeric', 'minute': 'numeric', 'second': 'numeric' }
+import Stockchart from '../stock-charts/stock-charts.vue'
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', 'hour': 'numeric', 'minute': 'numeric' }
+
+
 export default {
-  name: 'hello',
+  name: 'stocks',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       tableData: {},
       tableArray: []
     }
+  },
+  components: {
+    'charts': Stockchart
   },
   methods: {
     handleDataChange (data) {

@@ -1,10 +1,13 @@
 <template>
+<div>
+
 <md-table>
   <md-table-header>
     <md-table-row>
       <md-table-head class="header">Ticker</md-table-head>
       <md-table-head class="header">Price</md-table-head>
       <md-table-head class="header">Time</md-table-head>
+      <md-table-head class="header">Charts</md-table-head>
     </md-table-row>
   </md-table-header>
 
@@ -15,9 +18,11 @@
       <md-table-cell v-if="row.oldValue && row.newValue>=row.oldValue[row.oldValue.length-1]" style="background-color:#4CAF50">{{row.newValue}}</md-table-cell>
       <md-table-cell v-if="row.oldValue && row.newValue<row.oldValue[row.oldValue.length-1]" style="background-color:#F44336">{{row.newValue}}</md-table-cell>
       <md-table-cell>{{row.lastUpdated}}</md-table-cell>
+      <md-table-cell><charts :valued="row.oldValue"></charts></md-table-cell>
     </md-table-row>
   </md-table-body>
 </md-table>
+</div>
 </template>
 
 <script src='./stock-table.js'></script>
